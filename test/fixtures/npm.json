@@ -1,0 +1,98 @@
+{
+  "input": {
+    "name": "module",
+    "version": "1.0.0",
+    "realPath": "/",
+    "criteria": true,
+    "dependencies": {
+      "cat": {
+        "name": "cat",
+        "version": "9000.0.0",
+        "realPath": "/m/cat",
+        "dependencies": {
+          "dog": {
+            "name": "dog",
+            "version": "2014.0.0",
+            "realPath": "/m/cat/m/dog"
+          }
+        }
+      },
+      "horse": {
+        "name": "horse",
+        "version": "454.0.0",
+        "realPath": "/m/horse",
+        "dependencies": {
+          "dog": {
+            "name": "dog",
+            "version": "2015.0.0",
+            "criteria": true,
+            "realPath": "/m/horse/m/dog"
+          }
+        }
+      },
+      "pig": {
+        "name": "pig",
+        "version": "12.0.0",
+        "criteria": true,
+        "realPath": "/m/pig",
+        "dependencies": {
+          "dog": {
+            "name": "dog",
+            "version": "2014.0.0",
+            "realPath": "/m/pig/m/dog"
+          }
+        }
+      },
+      "andy": {
+        "name": "andy",
+        "version": "41.0.0",
+        "criteria": true,
+        "realPath": "/m/andy",
+        "dependencies": {
+          "dog": {
+            "name": "dog",
+            "version": "60.0.0",
+            "criteria": true,
+            "realPath": "/m/andy/m/dog"
+          }
+        }
+      }
+    }
+  },
+
+  "output": {
+    "module@1.0.0": {
+      "criteria": true,
+      "realPath": "/",
+      "parents": [],
+      "dependencies": {
+        "horse@454.0.0": {
+          "dependencies": {
+            "dog@2015.0.0": {
+              "criteria": true,
+              "realPath": "/m/horse/m/dog",
+              "parents": []
+            }
+          }
+        },
+        "pig@12.0.0": {
+          "criteria": true,
+          "realPath": "/m/pig",
+          "parents": []
+        },
+        "andy@41.0.0": {
+          "criteria": true,
+          "realPath": "/m/andy",
+          "parents": [],
+          "dependencies": {
+            "dog@60.0.0": {
+              "criteria": true,
+              "realPath": "/m/andy/m/dog",
+              "parents": []
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "atat",
+  "version": "0.0.1",
+  "description": "test dependency packages recursively",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test/*.js"
+  },
+  "author": "Jean-Charles Sisk <jeancharles@paypal.com>",
+  "license": "ISC",
+  "dependencies": {
+    "core-util-is": "^1.0.1"
+  },
+  "optionalDependencies": {
+    "npm": "^1.4.24"
+  },
+  "devDependencies": {
+    "tape": "^2.14.0"
+  }
+}
